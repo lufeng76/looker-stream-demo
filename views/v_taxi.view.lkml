@@ -58,6 +58,10 @@ view: v_taxi {
     sql: ${TABLE}.ps_timestamp ;;
   }
 
+  dimension: sg_publish {
+    type: string
+    sql: ${TABLE}.sg_publish ;;
+  }
   # Dates and timestamps can be represented in Looker using a dimension group of type: time.
   # Looker converts dates and timestamps to the specified timeframes within the dimension group.
 
@@ -74,7 +78,7 @@ view: v_taxi {
       quarter,
       year
     ]
-    sql: ${TABLE}.ps_timestamp ;;
+    sql: ${TABLE}.sg_publish ;;
   }
 
   dimension: ride_id {
@@ -104,6 +108,6 @@ view: v_taxi {
 
   measure: max_publish_time {
     type: time
-    sql: max(${TABLE}.ps_timestamp) ;;
+    sql: max(${TABLE}.sg_publish) ;;
   }
 }
