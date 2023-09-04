@@ -78,7 +78,7 @@ view: v_taxi {
       quarter,
       year
     ]
-    sql: ${TABLE}.sg_publish ;;
+    sql: ${TABLE}.publish ;;
   }
 
   dimension: ride_id {
