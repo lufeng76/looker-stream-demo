@@ -108,6 +108,6 @@ view: v_taxi {
 
   measure: max_publish_time {
     type: time
-    sql: max(${TABLE}.sg_publish) ;;
+    sql: max(${TABLE}.publish) ;;
   }
 }
